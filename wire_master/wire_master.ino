@@ -14,7 +14,7 @@ void loop() {
   Wire.requestFrom(8, 6);
 
   while (Wire.available()) {
-    Serial.print(Wire.read());
+    Serial.print((char) Wire.read());
   }
 
   Serial.println();
