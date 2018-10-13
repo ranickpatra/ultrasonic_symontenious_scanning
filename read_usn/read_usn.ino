@@ -38,7 +38,7 @@ void loop() {
 		PORTD |= 1 << (4+i);
 		delayMicroseconds(10);
 		PORTD &= B00001111;
-		cm[i] = to_cm(pulseIn(i + (1 << 3), HIGH, 11900) / 2);
+		cm[i] = to_cm(pulseIn(i + (1 << 3), HIGH, 20000) / 2);
 	}
 
 	delay(50);
